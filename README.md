@@ -1,16 +1,20 @@
 # Jhonathan Da Silva Gomes
 
-Profissional de tecnologia e estudante de Sistemas de Informação. Estou construindo produtos web e agentes de IA aplicada, com foco em soluções úteis e projetos que possam ser explorados na prática.
+Profissional de tecnologia e estudante de Sistemas de Informação. Estou construindo produtos web e sistemas com agentes de IA, com foco em aplicações práticas, fluxos multiagente e interfaces que podem ser exploradas.
 
 ## Projetos em destaque
 
-- [AgendlyPro](https://agendlypro.vercel.app) — SaaS de agendamento online para pequenos negócios.
-- [Agentes de IA para carreira](https://github.com/Jhowtelli/agentes-ia-carreira) — análise de vagas e planejamento de estudos com agentes especialistas.
+- [AgendlyPro](https://agendlypro.vercel.app) — produto SaaS de agendamento para pequenos negócios, com agenda pública, gestão de serviços, autenticação e pagamentos recorrentes.
+- [LogiMind Ops](https://jhowtelli.github.io/logimind-ops/) · [código](https://github.com/Jhowtelli/logimind-ops) — agentes de IA para explicar gargalos operacionais e comparar cenários de capacidade usando dados sintéticos.
+- [AgendaIQ](https://jhowtelli.github.io/agendaiq/) · [código](https://github.com/Jhowtelli/agendaiq) — sistema multiagente para analisar demanda, capacidade e retenção de uma agenda de serviços.
+- [CareerLab AI](https://jhowtelli.github.io/careerlab-ai/) · [código](https://github.com/Jhowtelli/careerlab-ai) — agentes para relacionar evidências de currículo e vaga, planejar estudos e praticar entrevistas.
 - [Portfólio](https://jhowtelli.github.io/Jhowtelli/) — projetos, trajetória e contato.
+
+As demonstrações dos três projetos de IA usam dados fictícios. Seus backends de agentes podem ser executados localmente com uma chave de API própria; nenhuma chave está incluída nos repositórios.
 
 ## Tecnologias nos projetos
 
-Python · TypeScript · Next.js · Supabase · Stripe · OpenAI Agents SDK · HTML · CSS · JavaScript
+Python · TypeScript · Next.js · Supabase · Stripe · OpenAI Agents SDK · FastAPI · HTML · CSS · JavaScript
 
 ## Experiência e estudos
 
