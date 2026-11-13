@@ -1,16 +1,19 @@
-## Hi there 👋
+# Jhonathan Da Silva Gomes
 
-<!--
-**Jhowtelli/Jhowtelli** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Profissional de tecnologia e estudante de Sistemas de Informação. Estou construindo produtos web e agentes de IA aplicada, com foco em soluções úteis e projetos que possam ser explorados na prática.
 
-Here are some ideas to get you started:
+## Projetos em destaque
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- [AgendlyPro](https://agendlypro.vercel.app) — SaaS de agendamento online para pequenos negócios.
+- [Agentes de IA para carreira](https://github.com/Jhowtelli/agentes-ia-carreira) — análise de vagas e planejamento de estudos com agentes especialistas.
+- [Portfólio](https://jhowtelli.github.io) — projetos, trajetória e contato.
+
+## Tecnologias nos projetos
+
+Python · TypeScript · Next.js · Supabase · Stripe · OpenAI Agents SDK · HTML · CSS · JavaScript
+
+## Experiência e estudos
+
+Minha trajetória combina operações, infraestrutura de TI e redes. Atualmente amplio essa base com desenvolvimento web, programação em Python e IA aplicada.
+
+[LinkedIn](https://www.linkedin.com/in/jhonathang/)
