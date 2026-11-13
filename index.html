@@ -3,55 +3,526 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Portfólio de Jhonathan Da Silva Gomes: produtos web, agentes de IA e tecnologia aplicada.">
-  <title>Jhonathan Gomes — Portfólio</title>
+  <meta name="theme-color" content="#101a2b">
+  <meta name="description" content="Portfólio de Jhonathan Gomes: AgendlyPro, produtos web e sistemas multiagente de IA com demonstrações e estudos de caso.">
+  <meta property="og:title" content="Jhonathan Gomes — Produtos web e agentes de IA">
+  <meta property="og:description" content="Estudos de caso, fluxos de agentes e demonstrações de produtos construídos com tecnologia aplicada.">
+  <meta property="og:type" content="website">
+  <title>Jhonathan Gomes — Produtos web e agentes de IA</title>
   <style>
-    :root{--paper:#fff;--ink:#111318;--muted:#5d626d;--line:#d9dde5;--blue:#002fa7;--soft:#e9efff;--page:1120px;font-family:Arial,Helvetica,sans-serif;color-scheme:light}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6}a{color:inherit}a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.wrap{width:min(var(--page),calc(100% - 48px));margin:auto}
-    .topbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:22px;font-weight:800;letter-spacing:-1.5px;text-decoration:none}.brand span,.period{color:var(--blue)}nav{display:flex;gap:30px}nav a{text-decoration:none;font-size:14px;font-weight:700}nav a:hover,.social a:hover{color:var(--blue);text-decoration:underline;text-underline-offset:4px}
-    .hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(245px,.6fr);gap:8%;align-items:center;min-height:570px;padding:76px 0 60px;position:relative}.eyebrow{margin:0 0 18px;color:var(--muted);text-transform:uppercase;letter-spacing:.11em;font-size:11px;font-weight:750}.marker{display:inline-block;width:8px;height:8px;margin-right:7px;background:var(--blue)}h1,h2,h3,p{margin-top:0}h1{max-width:760px;margin-bottom:24px;font-size:clamp(54px,8vw,94px);line-height:.98;letter-spacing:-.075em} .lead{max-width:620px;margin-bottom:28px;color:#3d4149;font-size:clamp(17px,2vw,20px)}.actions{display:flex;align-items:center;gap:24px}.button{min-height:47px;padding:12px 17px;display:inline-flex;align-items:center;background:var(--blue);color:#fff;text-decoration:none;font-size:14px;font-weight:700}.button:hover{background:#001f73}.text-link{font-size:14px;font-weight:700;text-underline-offset:4px}
-    .aside{border-left:1px solid var(--line);padding:10px 0 10px 26px}.aside-title{margin-bottom:14px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:750}.aside ul{margin:0;padding:0;list-style:none}.aside li{padding:11px 0;border-top:1px solid var(--line);font-weight:700}.aside li span{display:inline-block;width:40px;color:var(--blue);font-size:12px}.aside-note{max-width:230px;margin:18px 0 0;color:var(--muted);font-size:13px}.hero-footer{position:absolute;bottom:0;left:0;right:0;padding:12px 0;display:flex;justify-content:space-between;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
-    section{padding:88px 0;border-top:1px solid var(--line)}.section-heading{display:grid;grid-template-columns:.8fr 1.2fr 1fr;gap:22px;align-items:start;margin-bottom:34px}.section-heading .eyebrow{margin-top:9px}h2{margin-bottom:0;font-size:clamp(34px,4.5vw,54px);line-height:1.04;letter-spacing:-.055em}.intro{max-width:320px;margin:5px 0 0;color:var(--muted);font-size:15px}
-    .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.project{min-height:310px;padding:25px;border:1px solid var(--line);display:flex;flex-direction:column}.project.featured{border-top:4px solid var(--blue);background:linear-gradient(180deg,#f8faff 0%,#fff 42%)}.project-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:16px;color:var(--muted);font-size:10px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}.project h3{margin-bottom:10px;font-size:32px;line-height:1.1;letter-spacing:-.045em}.project p{max-width:600px;color:#3d4149;font-size:15px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 18px;padding:0;list-style:none}.tags li{padding:4px 8px;border:1px solid var(--line);font-size:11px}.project-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto}.project-link{color:var(--blue);font-size:14px;font-weight:750;text-underline-offset:4px}
-    .method{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%}.method .section-heading{display:block;margin:0}.method .section-heading .eyebrow{margin:0 0 16px}.flow{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}.step{min-height:150px;padding:17px 12px 12px 0}.step+.step{padding-left:15px;border-left:1px solid var(--line)}.step strong{color:var(--blue);font-size:13px}.step p{margin:12px 0 0;color:var(--muted);font-size:13px}.note{grid-column:2;margin:16px 0 0;color:var(--muted);font-size:13px}
-    .trajectory{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%}.trajectory .section-heading{display:block;margin:0}.trajectory .section-heading .eyebrow{margin:0 0 16px}.trajectory-copy{max-width:680px}.trajectory-copy p{color:#3d4149}.tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tech span{padding:5px 9px;border:1px solid var(--line);font-size:12px}
-    .contact{display:flex;align-items:end;justify-content:space-between;gap:32px;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:25% 1px;background-repeat:repeat-x;background-position:top left}.contact h2{max-width:570px}.social{display:flex;gap:24px;padding-bottom:7px}.social a{color:var(--blue);font-size:14px;font-weight:750;text-underline-offset:4px}.footer{padding:18px 0 24px;display:flex;justify-content:space-between;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
-    @media(max-width:760px){.wrap{width:min(100% - 36px,var(--page))}.topbar{min-height:68px}nav{gap:14px}.hero{grid-template-columns:1fr;gap:38px;min-height:0;padding:58px 0 60px}h1{font-size:clamp(52px,14vw,76px)}.aside{max-width:440px}.section-heading{grid-template-columns:1fr;gap:10px;margin-bottom:25px}.section-heading .eyebrow{margin:0}.projects{grid-template-columns:1fr}.method,.trajectory{grid-template-columns:1fr;gap:28px}.note{grid-column:1}.contact{align-items:start;flex-direction:column}section{padding:68px 0}}
-    @media(max-width:460px){body{font-size:15px}.topbar{align-items:flex-start;padding:15px 0;gap:18px}.brand{padding-top:3px}nav{flex-wrap:wrap;justify-content:flex-end}nav a{font-size:12px}.hero-footer{font-size:10px}.flow{grid-template-columns:1fr}.step{min-height:0;padding:14px 0}.step+.step{padding-left:0;border-left:0;border-top:1px solid var(--line)}.footer{flex-direction:column;gap:5px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    :root {
+      color-scheme: light;
+      --ink: #111b2c;
+      --ink-soft: #263247;
+      --night: #101a2b;
+      --night-2: #17243a;
+      --paper: #f3f1ec;
+      --white: #fffefa;
+      --muted: #606b7c;
+      --line: #d9d9d5;
+      --blue: #345df5;
+      --blue-soft: #e8edff;
+      --lime: #d8f36a;
+      --sage: #d8e5db;
+      --clay: #bb6246;
+      --page: 1180px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.6; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    img, svg { display: block; max-width: 100%; }
+    .shell { width: min(var(--page), calc(100% - 48px)); margin-inline: auto; }
+    .skip { position: absolute; top: -100px; left: 16px; z-index: 30; padding: 10px 14px; background: var(--white); color: var(--ink); }
+    .skip:focus { top: 12px; }
+    .topbar { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid rgba(17,27,44,.1); background: rgba(243,241,236,.93); backdrop-filter: blur(14px); }
+    .topbar-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 850; letter-spacing: -.04em; }
+    .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px; background: var(--night); color: var(--lime); font-size: 12px; letter-spacing: -.06em; }
+    .brand-name { font-size: 14px; }
+    .nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 32px); }
+    .nav a { color: var(--ink-soft); font-size: 13px; font-weight: 700; text-decoration: none; }
+    .nav a:hover { color: var(--blue); }
+    .nav .nav-cta { padding: 10px 14px; border: 1px solid var(--ink); border-radius: 7px; }
+    .nav .nav-cta:hover { background: var(--ink); color: white; }
+
+    .hero { overflow: hidden; position: relative; color: #f8f9fb; background: var(--night); }
+    .hero::before { content: ""; position: absolute; inset: 0; opacity: .23; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(90deg, #000, transparent 80%); }
+    .hero::after { content: ""; width: 540px; height: 540px; position: absolute; top: -325px; right: -75px; border: 1px solid rgba(216,243,106,.22); border-radius: 50%; box-shadow: 0 0 0 48px rgba(216,243,106,.025), 0 0 0 96px rgba(216,243,106,.025); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; padding-block: clamp(68px, 9vw, 112px) 34px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(360px, .96fr); align-items: center; gap: clamp(36px, 7vw, 86px); }
+    .eyebrow, .section-kicker { margin: 0 0 16px; text-transform: uppercase; letter-spacing: .15em; font-size: 10px; font-weight: 850; }
+    .hero .eyebrow { color: var(--lime); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 710px; margin-bottom: 25px; font-size: clamp(45px, 7vw, 82px); line-height: .99; letter-spacing: -.075em; }
+    h1 em { color: var(--lime); font-style: normal; }
+    .hero-copy { max-width: 600px; margin-bottom: 30px; color: #ccd3df; font-size: clamp(16px, 1.8vw, 19px); }
+    .hero-copy strong { color: white; font-weight: 700; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+    .button { min-height: 46px; padding: 12px 17px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid transparent; border-radius: 7px; font-size: 13px; font-weight: 800; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-lime { background: var(--lime); color: var(--night); }
+    .button-lime:hover { background: #e7ff8b; }
+    .button-outline { border-color: rgba(255,255,255,.38); color: white; }
+    .button-outline:hover { background: rgba(255,255,255,.1); }
+    .button-light { background: var(--white); color: var(--ink); }
+    .button-dark { background: var(--ink); color: white; }
+    .hero-aside-label { margin: 16px 0 0; color: #a9b3c4; font-size: 11px; }
+
+    .product-preview { position: relative; padding: 12px; border: 1px solid rgba(255,255,255,.17); border-radius: 17px; background: rgba(255,255,255,.055); box-shadow: 0 26px 90px rgba(0,0,0,.26); transform: rotate(1.2deg); }
+    .preview-window { overflow: hidden; border-radius: 10px; background: #f7f7f4; color: var(--ink); }
+    .preview-bar { min-height: 38px; padding: 0 13px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border-bottom: 1px solid #e4e5e1; background: #fff; }
+    .preview-brand { display: inline-flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 850; }
+    .preview-brand-dot { width: 8px; height: 8px; border-radius: 3px; background: var(--clay); }
+    .preview-status { color: #697383; font-size: 9px; }
+    .preview-body { padding: 17px; }
+    .preview-head { display: flex; align-items: end; justify-content: space-between; gap: 14px; margin-bottom: 13px; }
+    .preview-head small { display: block; color: #818895; font-size: 9px; }
+    .preview-head strong { display: block; font-size: 17px; letter-spacing: -.04em; }
+    .preview-count { padding: 7px 9px; border-radius: 7px; background: #eaf0e9; color: #38503b; font-size: 9px; font-weight: 800; }
+    .preview-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 10px; }
+    .appointment-list, .booking-card { padding: 11px; border: 1px solid #e1e3df; border-radius: 8px; background: white; }
+    .preview-caption { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 7px; color: #687382; font-size: 8px; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
+    .appointment { display: grid; grid-template-columns: 37px 1fr auto; align-items: center; gap: 6px; padding: 8px 0; border-top: 1px solid #eff0ed; }
+    .appointment time { color: #455168; font-size: 9px; font-weight: 800; }
+    .appointment strong { display: block; font-size: 9px; line-height: 1.25; }
+    .appointment small { display: block; margin-top: 2px; color: #818895; font-size: 8px; }
+    .state { padding: 3px 5px; border-radius: 4px; background: #e7f2e9; color: #3a6b48; font-size: 7px; font-weight: 850; }
+    .booking-card { background: #fbfaf7; }
+    .booking-top { height: 40px; margin-bottom: 10px; display: grid; place-items: center; border-radius: 6px; background: linear-gradient(135deg, #d6e5da, #f0ddd4); color: #3e5046; font-size: 10px; font-weight: 850; }
+    .booking-card p { margin-bottom: 9px; font-size: 9px; font-weight: 800; }
+    .service-line { margin: 5px 0; padding: 6px 7px; border: 1px solid #e6e5df; border-radius: 5px; color: #4f5867; font-size: 8px; }
+    .booking-button { margin-top: 8px; padding: 7px; border-radius: 5px; background: var(--night); color: white; text-align: center; font-size: 8px; font-weight: 800; }
+    .preview-note { position: absolute; right: 22px; bottom: -15px; padding: 7px 10px; border: 1px solid rgba(255,255,255,.18); border-radius: 5px; background: #1d2a3f; color: #d9e1ee; font-size: 9px; }
+    .hero-foot { margin-top: clamp(44px, 7vw, 74px); padding-top: 17px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 25px; border-top: 1px solid rgba(255,255,255,.16); color: #aeb8c6; font-size: 11px; }
+    .hero-foot strong { color: white; }
+
+    .intro-strip { padding-block: 30px; border-bottom: 1px solid var(--line); background: var(--white); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 42px; align-items: center; }
+    .intro-label { margin: 0; color: var(--blue); font-size: 10px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    .intro-copy { max-width: 760px; margin: 0; color: #465164; font-size: 14px; }
+    .intro-copy strong { color: var(--ink); }
+
+    .section { padding-block: clamp(68px, 9vw, 110px); }
+    .section-head { display: grid; grid-template-columns: .8fr 1.2fr .8fr; align-items: start; gap: 24px; margin-bottom: 38px; }
+    .section-kicker { margin: 9px 0 0; color: var(--blue); }
+    h2 { margin-bottom: 0; font-size: clamp(34px, 5vw, 57px); line-height: 1.02; letter-spacing: -.065em; }
+    .section-intro { max-width: 300px; margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+    .flagship { padding: clamp(22px, 4.5vw, 52px); border: 1px solid #dcded7; border-radius: 16px; background: var(--white); box-shadow: 0 14px 45px rgba(23,36,58,.045); }
+    .flagship-top { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 28px; }
+    .flagship-top span { color: var(--muted); font-size: 10px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .flagship-top .featured { padding: 7px 9px; border: 1px solid #d9e4a9; border-radius: 30px; background: #f0f6d8; color: #445323; letter-spacing: .04em; }
+    .flagship-grid { display: grid; grid-template-columns: .84fr 1.16fr; align-items: center; gap: clamp(28px, 6vw, 72px); }
+    .flagship-copy h3 { margin-bottom: 14px; font-size: clamp(36px, 5vw, 59px); line-height: 1; letter-spacing: -.07em; }
+    .flagship-summary { margin-bottom: 22px; color: #455164; font-size: 16px; }
+    .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin: 0 0 24px; padding: 0; list-style: none; }
+    .feature-list li { display: flex; gap: 9px; color: #344054; font-size: 12px; }
+    .check { width: 17px; height: 17px; flex: 0 0 17px; display: grid; place-items: center; border-radius: 50%; background: #e7efd9; color: #47633e; font-size: 10px; font-weight: 900; }
+    .stack-row { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 25px; }
+    .stack-tag { padding: 5px 8px; border: 1px solid #dedfd9; border-radius: 5px; color: #596577; font-size: 10px; font-weight: 750; }
+    .flagship-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+
+    .booking-visual { position: relative; padding: clamp(14px, 2.4vw, 26px); border-radius: 12px; background: #e8eee8; }
+    .booking-visual::before { content: "FLUXO DO PRODUTO"; position: absolute; top: -11px; left: 18px; padding: 3px 8px; border: 1px solid #d0dbd0; border-radius: 4px; background: var(--white); color: #54665b; font-size: 8px; font-weight: 900; letter-spacing: .1em; }
+    .booking-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .booking-step { min-height: 136px; padding: 13px; border: 1px solid rgba(20,42,32,.1); border-radius: 8px; background: rgba(255,255,255,.84); }
+    .step-no { width: 23px; height: 23px; display: grid; place-items: center; margin-bottom: 16px; border-radius: 6px; background: var(--night); color: var(--lime); font-size: 9px; font-weight: 900; }
+    .booking-step strong { display: block; margin-bottom: 5px; font-size: 12px; }
+    .booking-step p { margin: 0; color: #687383; font-size: 10px; line-height: 1.45; }
+    .booking-bottom { margin-top: 9px; padding: 9px 11px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border-radius: 7px; background: white; color: #596577; font-size: 9px; }
+    .booking-bottom strong { color: var(--ink); }
+    .booking-bottom span:last-child { padding: 4px 7px; border-radius: 4px; background: #edf3df; color: #4f6634; font-weight: 850; }
+    .case-context { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
+    .context-card { padding: 15px; border-top: 2px solid #cad2c8; background: #f6f6f1; }
+    .context-card small { display: block; margin-bottom: 7px; color: #697283; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .context-card p { margin: 0; color: #344054; font-size: 11px; }
+
+    .agent-section { background: #eae9e3; }
+    .agent-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .agent-case { overflow: hidden; display: grid; grid-template-columns: .85fr 1.15fr; border: 1px solid #d4d5cf; border-radius: 14px; background: var(--white); }
+    .agent-case:nth-child(even) .agent-visual { order: 2; }
+    .agent-case:nth-child(even) .agent-content { order: 1; }
+    .agent-visual { min-height: 310px; padding: clamp(20px, 3.8vw, 38px); display: flex; align-items: center; justify-content: center; }
+    .visual-logimind { background: #17241d; color: white; }
+    .visual-agendaiq { background: #e1e9df; color: var(--ink); }
+    .visual-careerlab { background: #e8edff; color: var(--ink); }
+    .mini-dashboard { width: 100%; max-width: 440px; padding: 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 10px; background: rgba(255,255,255,.06); box-shadow: 0 18px 45px rgba(0,0,0,.2); }
+    .mini-top { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 14px; color: #d8e2d3; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .synthetic-pill { padding: 4px 6px; border: 1px solid rgba(216,243,106,.4); border-radius: 4px; color: var(--lime); font-size: 7px; letter-spacing: .06em; }
+    .mini-metrics { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; }
+    .mini-metric { padding: 10px; border: 1px solid rgba(255,255,255,.1); border-radius: 6px; background: rgba(255,255,255,.055); }
+    .mini-metric small { display: block; margin-bottom: 4px; color: #b6c2b0; font-size: 7px; font-weight: 750; letter-spacing: .08em; }
+    .mini-metric strong { color: white; font-size: 19px; letter-spacing: -.05em; }
+    .mini-metric em { color: var(--lime); font-size: 8px; font-style: normal; }
+    .mini-bars { height: 56px; margin-top: 10px; padding: 8px 10px; display: flex; align-items: end; gap: 7px; border-radius: 6px; background: rgba(255,255,255,.045); }
+    .mini-bars span { flex: 1; border-radius: 3px 3px 0 0; background: #afcf53; }
+    .mini-bars span:nth-child(1){height:38%}.mini-bars span:nth-child(2){height:52%}.mini-bars span:nth-child(3){height:44%}.mini-bars span:nth-child(4){height:70%}.mini-bars span:nth-child(5){height:94%}.mini-bars span:nth-child(6){height:60%}.mini-bars span:nth-child(7){height:47%}
+    .agenda-preview { width: 100%; max-width: 430px; padding: 18px; border: 1px solid #d3ddd1; border-radius: 11px; background: #f8faf6; box-shadow: 0 17px 40px rgba(37,55,41,.11); }
+    .agenda-preview .mini-top { color: #647064; }
+    .agenda-preview .synthetic-pill { border-color: #b7c9b5; color: #526a50; }
+    .agenda-big { display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px; }
+    .agenda-big strong { font-size: 34px; letter-spacing: -.08em; }
+    .agenda-big span { color: #708073; font-size: 10px; }
+    .agenda-progress { height: 9px; overflow: hidden; border-radius: 20px; background: #e2e9df; }
+    .agenda-progress span { width: 75%; height: 100%; display: block; border-radius: inherit; background: #718b71; }
+    .agenda-services { margin-top: 13px; display: grid; gap: 6px; }
+    .agenda-service { padding: 8px 9px; display: flex; justify-content: space-between; border: 1px solid #e4e9e1; border-radius: 6px; background: white; color: #465548; font-size: 9px; }
+    .agenda-service strong { font-size: 9px; }
+    .evidence-board { width: 100%; max-width: 430px; padding: 17px; border: 1px solid #cad4ff; border-radius: 11px; background: #f8f9ff; box-shadow: 0 17px 40px rgba(43,61,130,.11); }
+    .evidence-top { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 13px; color: #536078; font-size: 9px; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+    .evidence-row { margin-top: 8px; padding: 10px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; border: 1px solid #e1e6fc; border-radius: 7px; background: white; }
+    .evidence-row strong { display: block; font-size: 10px; }
+    .evidence-row small { display: block; margin-top: 3px; color: #778197; font-size: 8px; }
+    .evidence-status { padding: 4px 6px; border-radius: 4px; background: #e7f4e7; color: #3b6b4b; font-size: 7px; font-weight: 850; }
+    .evidence-status.pending { background: #fff1d8; color: #806022; }
+    .agent-content { padding: clamp(23px, 4.2vw, 46px); }
+    .case-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 13px; color: var(--muted); font-size: 9px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+    .case-meta .case-no { color: var(--blue); }
+    .agent-content h3 { margin-bottom: 10px; font-size: clamp(28px, 4vw, 42px); line-height: 1; letter-spacing: -.065em; }
+    .agent-lead { max-width: 590px; margin-bottom: 19px; color: #4e596b; font-size: 13px; }
+    .case-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 15px; margin-bottom: 19px; }
+    .case-fact { padding-top: 9px; border-top: 1px solid #e1e2dd; }
+    .case-fact small { display: block; margin-bottom: 4px; color: #737c89; font-size: 8px; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
+    .case-fact p { margin: 0; color: #3e495b; font-size: 10px; }
+    .agent-flow { margin: 0 0 20px; }
+    .flow-label { margin-bottom: 7px; color: #737c89; font-size: 8px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .flow-line { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+    .flow-node { padding: 6px 8px; border: 1px solid #dfe1dc; border-radius: 5px; background: #f7f7f3; color: #394557; font-size: 8px; font-weight: 750; }
+    .flow-arrow { color: #9aa1ab; font-size: 10px; }
+    .agent-links { display: flex; flex-wrap: wrap; gap: 15px; }
+    .inline-link { color: var(--blue); font-size: 11px; font-weight: 850; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .inline-link:hover { color: #1b35aa; }
+    .guardrail { margin: 0; padding: 8px 9px; border-left: 2px solid #a5b46e; background: #f5f7ed; color: #526043; font-size: 9px; }
+
+    .method-section { background: var(--night); color: white; }
+    .method-section .section-kicker { color: var(--lime); }
+    .method-section .section-head { margin-bottom: 36px; }
+    .method-section .section-intro { color: #b8c3d3; }
+    .method-board { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid rgba(255,255,255,.17); border-radius: 12px; background: rgba(255,255,255,.035); }
+    .method-step { min-height: 170px; padding: 20px; }
+    .method-step + .method-step { border-left: 1px solid rgba(255,255,255,.15); }
+    .method-step-no { display: block; margin-bottom: 25px; color: var(--lime); font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+    .method-step h3 { margin-bottom: 8px; font-size: 16px; letter-spacing: -.03em; }
+    .method-step p { margin: 0; color: #b9c3d0; font-size: 11px; }
+    .method-note { margin: 15px 0 0; color: #aeb9c8; font-size: 10px; }
+
+    .profile-section { background: var(--paper); }
+    .profile-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8%; align-items: start; }
+    .profile-title { position: sticky; top: 110px; }
+    .profile-title .section-kicker { margin-bottom: 13px; }
+    .profile-title h2 { max-width: 380px; }
+    .profile-copy p { max-width: 710px; color: #485467; font-size: 14px; }
+    .timeline { margin: 24px 0 28px; border-top: 1px solid var(--line); }
+    .timeline-row { padding: 13px 0; display: grid; grid-template-columns: 135px 1fr; gap: 18px; border-bottom: 1px solid var(--line); }
+    .timeline-row strong { color: var(--ink); font-size: 11px; }
+    .timeline-row span { color: #586376; font-size: 11px; }
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .skill-card { padding: 16px; border: 1px solid #dddeda; border-radius: 8px; background: var(--white); }
+    .skill-card h3 { margin-bottom: 8px; color: var(--blue); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+    .skill-card p { margin: 0; color: #485467; font-size: 11px; }
+
+    .contact { padding-block: clamp(55px, 8vw, 86px); background: var(--lime); }
+    .contact-inner { display: flex; align-items: end; justify-content: space-between; gap: 28px; }
+    .contact .section-kicker { margin-bottom: 14px; color: #435320; }
+    .contact h2 { max-width: 650px; font-size: clamp(36px, 6vw, 67px); }
+    .contact-copy { max-width: 345px; margin: 12px 0 0; color: #394526; font-size: 13px; }
+    .contact-links { min-width: 220px; display: grid; gap: 9px; }
+    .contact-links a { padding: 12px 14px; display: flex; justify-content: space-between; gap: 12px; border: 1px solid rgba(17,27,44,.32); border-radius: 6px; font-size: 12px; font-weight: 850; text-decoration: none; }
+    .contact-links a:hover { background: rgba(255,255,255,.35); }
+    .footer { padding-block: 18px 22px; background: var(--night); color: #c2cad5; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; font-size: 10px; }
+    .footer a { color: white; text-underline-offset: 3px; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .section-head { grid-template-columns: .7fr 1.3fr; }
+      .section-intro { grid-column: 2; max-width: 520px; }
+      .flagship-grid { grid-template-columns: 1fr; }
+      .agent-case { grid-template-columns: 1fr 1.1fr; }
+      .method-board { grid-template-columns: 1fr 1fr; }
+      .method-step:nth-child(3) { border-left: 0; border-top: 1px solid rgba(255,255,255,.15); }
+      .method-step:nth-child(4) { border-top: 1px solid rgba(255,255,255,.15); }
+    }
+    @media (max-width: 680px) {
+      .shell { width: min(var(--page), calc(100% - 34px)); }
+      .topbar-inner { min-height: 66px; gap: 12px; }
+      .brand-name { display: none; }
+      .nav { gap: 12px; }
+      .nav a { font-size: 11px; }
+      .nav .nav-cta { padding: 8px 10px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; }
+      .hero-inner { padding-top: 62px; }
+      h1 { max-width: 590px; font-size: clamp(46px, 14vw, 72px); }
+      .product-preview { max-width: 520px; transform: none; }
+      .hero-foot { margin-top: 40px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 10px; }
+      .section-head { grid-template-columns: 1fr; gap: 10px; margin-bottom: 25px; }
+      .section-kicker { margin: 0; }
+      .section-intro { grid-column: 1; }
+      .flagship { padding: 20px; }
+      .case-context { grid-template-columns: 1fr; }
+      .booking-flow { grid-template-columns: 1fr; }
+      .booking-step { min-height: 0; display: grid; grid-template-columns: 28px 1fr; column-gap: 9px; align-items: start; }
+      .step-no { grid-row: span 2; margin: 0; }
+      .booking-step strong { margin: 2px 0 3px; }
+      .agent-case { grid-template-columns: 1fr; }
+      .agent-case:nth-child(even) .agent-visual, .agent-case:nth-child(even) .agent-content { order: initial; }
+      .agent-visual { min-height: 245px; }
+      .profile-grid { grid-template-columns: 1fr; gap: 23px; }
+      .profile-title { position: static; }
+      .contact-inner { align-items: start; flex-direction: column; }
+      .contact-links { width: 100%; max-width: 380px; }
+    }
+    @media (max-width: 430px) {
+      .nav { gap: 9px; }
+      .nav a { font-size: 10px; }
+      .hero-foot { align-items: start; flex-direction: column; }
+      .preview-body { padding: 11px; }
+      .preview-layout { grid-template-columns: 1fr; }
+      .booking-card { display: none; }
+      .feature-list, .case-facts, .skills { grid-template-columns: 1fr; }
+      .timeline-row { grid-template-columns: 1fr; gap: 3px; }
+      .method-board { grid-template-columns: 1fr; }
+      .method-step + .method-step { border-top: 1px solid rgba(255,255,255,.15); border-left: 0; }
+      .method-step { min-height: 0; }
+      .method-step-no { margin-bottom: 12px; }
+      .footer-inner { align-items: start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
   </style>
 </head>
 <body>
-  <a class="skip" href="#conteudo" style="position:absolute;left:-9999px">Pular para o conteúdo</a>
-  <header class="topbar wrap">
-    <a class="brand" href="#inicio" aria-label="Início">JG<span>.</span></a>
-    <nav aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#trajetoria">Trajetória</a><a href="#contato">Contato</a></nav>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner shell">
+      <a class="brand" href="#inicio" aria-label="Jhonathan Gomes, início">
+        <span class="brand-mark" aria-hidden="true">JG</span><span class="brand-name">Jhonathan Gomes</span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#agendlypro">AgendlyPro</a><a href="#projetos">Agentes de IA</a><a href="#sobre">Sobre</a><a class="nav-cta" href="#contato">Contato <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
   </header>
-  <main id="conteudo" class="wrap">
-    <section class="hero" id="inicio" style="border-top:0">
-      <div>
-        <p class="eyebrow"><span class="marker"></span>Portfólio pessoal · 2026</p>
-        <h1>Tecnologia<br>em movimento<span class="period">.</span></h1>
-        <p class="lead">Sou Jhonathan, profissional de tecnologia e estudante de Sistemas de Informação. Minha experiência em infraestrutura, redes e operações agora se conecta a produtos web e agentes de inteligência artificial.</p>
-        <div class="actions"><a class="button" href="#projetos">Conheça os projetos</a><a class="text-link" href="https://github.com/Jhowtelli" target="_blank" rel="noreferrer">GitHub</a></div>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-inner shell">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Portfólio · Sistemas de Informação · Cajamar, SP</p>
+            <h1 id="hero-title">Produtos web.<br>Agentes de IA.<br><em>Trabalho concreto.</em></h1>
+            <p class="hero-copy">Sou Jhonathan. Minha experiência em infraestrutura e operações se conecta ao que construo hoje: <strong>produtos web e protótipos multiagente</strong> com foco em agenda, capacidade operacional e preparação para vagas.</p>
+            <div class="actions">
+              <a class="button button-lime" href="#agendlypro">Ver projeto principal <span aria-hidden="true">↓</span></a>
+              <a class="button button-outline" href="#projetos">Explorar os agentes</a>
+            </div>
+            <p class="hero-aside-label">Inglês intermediário · Aberto a oportunidades em desenvolvimento e IA aplicada</p>
+          </div>
+
+          <div class="product-preview" aria-label="Ilustração de interface baseada na demonstração do AgendlyPro">
+            <div class="preview-window">
+              <div class="preview-bar"><span class="preview-brand"><i class="preview-brand-dot" aria-hidden="true"></i> AgendlyPro</span><span class="preview-status">agenda online · prévia ilustrativa</span></div>
+              <div class="preview-body">
+                <div class="preview-head"><div><small>PAINEL DO ESTABELECIMENTO</small><strong>Agenda do dia</strong></div><span class="preview-count">5 atendimentos</span></div>
+                <div class="preview-layout">
+                  <div class="appointment-list">
+                    <div class="preview-caption"><span>Horário</span><span>Atendimento</span></div>
+                    <div class="appointment"><time>09:00</time><span><strong>Corte + escova</strong><small>Agenda pública</small></span><span class="state">CONFIRMADO</span></div>
+                    <div class="appointment"><time>10:30</time><span><strong>Coloração</strong><small>Agenda pública</small></span><span class="state">CONFIRMADO</span></div>
+                    <div class="appointment"><time>14:00</time><span><strong>Mão + pé</strong><small>Agenda pública</small></span><span class="state">CONFIRMADO</span></div>
+                  </div>
+                  <div class="booking-card"><div class="booking-top">Página pública</div><p>Escolha um serviço</p><div class="service-line">Corte feminino · 50 min</div><div class="service-line">Escova · 40 min</div><div class="service-line">Coloração · 2 h</div><div class="booking-button">Escolher horário</div></div>
+                </div>
+              </div>
+            </div>
+            <span class="preview-note">Ilustração baseada na demonstração pública</span>
+          </div>
+        </div>
+        <div class="hero-foot"><span>Foco <strong>Produtos digitais e IA aplicada</strong></span><span>Ferramentas <strong>Python · FastAPI · Next.js · TypeScript</strong></span><span>Projetos <strong>AgendlyPro + 3 sistemas multiagente</strong></span></div>
       </div>
-      <aside class="aside" aria-label="Focos atuais"><p class="aside-title">Foco atual</p><ul><li><span>01</span>Produtos web</li><li><span>02</span>Agentes de IA</li><li><span>03</span>Automação prática</li></ul><p class="aside-note">Aprender construindo, com projetos que podem ser explorados e avaliados.</p></aside>
-      <div class="hero-footer"><span>Cajamar, SP</span><span>Português · Inglês intermediário</span></div>
     </section>
-    <section id="projetos">
-      <div class="section-heading"><p class="eyebrow">Trabalho selecionado</p><h2>Projetos</h2><p class="intro">Produtos e experimentos que mostram como transformo ideias em soluções construídas.</p></div>
-      <div class="projects">
-        <article class="project featured"><div class="project-top"><span>01 · Produto web</span><span>Projeto principal</span></div><h3>AgendlyPro</h3><p>Produto SaaS responsivo para barbearias, salões e profissionais autônomos. Inclui agenda pública, gestão de serviços e horários, autenticação e pagamentos recorrentes.</p><ul class="tags" aria-label="Tecnologias"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Stripe</li></ul><div class="project-actions"><a class="project-link" href="https://agendlypro.vercel.app" target="_blank" rel="noreferrer">Abrir demonstração ↗</a></div></article>
-        <article class="project"><div class="project-top"><span>02 · IA para operações</span><span>Python · FastAPI</span></div><h3>LogiMind Ops</h3><p>Agentes especialistas investigam gargalos de fluxo, estimam capacidade e comparam cenários operacionais. As ferramentas são somente de leitura e os dados públicos são sintéticos.</p><ul class="tags" aria-label="Tecnologias"><li>OpenAI Agents SDK</li><li>Handoffs</li><li>Simulação</li><li>FastAPI</li></ul><div class="project-actions"><a class="project-link" href="https://jhowtelli.github.io/logimind-ops/" target="_blank" rel="noreferrer">Abrir demonstração ↗</a><a class="project-link" href="https://github.com/Jhowtelli/logimind-ops" target="_blank" rel="noreferrer">Ver código ↗</a></div></article>
-        <article class="project"><div class="project-top"><span>03 · IA para serviços</span><span>Python · FastAPI</span></div><h3>AgendaIQ</h3><p>Um coordenador encaminha análises de demanda, ocupação e retenção a agentes especialistas, apoiando decisões de agenda com indicadores e cenários editáveis.</p><ul class="tags" aria-label="Tecnologias"><li>Agentes especialistas</li><li>CSV local</li><li>Handoffs</li><li>Dados sintéticos</li></ul><div class="project-actions"><a class="project-link" href="https://jhowtelli.github.io/agendaiq/" target="_blank" rel="noreferrer">Abrir demonstração ↗</a><a class="project-link" href="https://github.com/Jhowtelli/agendaiq" target="_blank" rel="noreferrer">Ver código ↗</a></div></article>
-        <article class="project"><div class="project-top"><span>04 · IA para carreira</span><span>Python · Agents SDK</span></div><h3>CareerLab AI</h3><p>Agentes conectam requisitos de vagas às evidências fornecidas, montam um plano de estudos e praticam perguntas de entrevista. A pessoa revisa as sugestões; não há decisão automatizada de contratação.</p><ul class="tags" aria-label="Tecnologias"><li>Handoffs</li><li>Ferramentas locais</li><li>Plano de estudos</li><li>Privacidade</li></ul><div class="project-actions"><a class="project-link" href="https://jhowtelli.github.io/careerlab-ai/" target="_blank" rel="noreferrer">Abrir demonstração ↗</a><a class="project-link" href="https://github.com/Jhowtelli/careerlab-ai" target="_blank" rel="noreferrer">Ver código ↗</a></div></article>
+
+    <section class="intro-strip" aria-label="Contexto profissional">
+      <div class="intro-grid shell">
+        <p class="intro-label">De onde venho e o que construo</p>
+        <p class="intro-copy">Trabalhei com infraestrutura e redes em operações logísticas e estudo Sistemas de Informação. <strong>Levo essa vivência para projetos que explicam seu propósito, mostram o fluxo e deixam claros os limites da demonstração.</strong></p>
       </div>
     </section>
-    <section class="method"><div class="section-heading"><p class="eyebrow">Como os agentes trabalham</p><h2>Orquestração<br>com propósito.</h2></div><div class="flow"><div class="step"><strong>01 · Contexto</strong><p>Recebe a pergunta, objetivo e dados autorizados para aquela tarefa.</p></div><div class="step"><strong>02 · Especialistas</strong><p>Um coordenador encaminha o trabalho a agentes com papéis e ferramentas definidos.</p></div><div class="step"><strong>03 · Revisão</strong><p>As respostas explicam cenários e evidências para a pessoa avaliar.</p></div></div><p class="note">Os protótipos usam dados sintéticos e não executam ações em sistemas de produção. Backends de IA exigem uma chave própria configurada localmente.</p></section>
-    <section class="trajectory" id="trajetoria"><div class="section-heading"><p class="eyebrow">Experiência e direção</p><h2>Uma base prática.<br>Novas possibilidades.</h2></div><div class="trajectory-copy"><p>Minha trajetória passa por infraestrutura e redes em operações logísticas, com contato com Active Directory, coletores Zebra e Honeywell, scanners e validação de melhorias.</p><p>Estou cursando Sistemas de Informação e ampliando essa base com desenvolvimento web, programação em Python e agentes de inteligência artificial.</p><div class="tech" aria-label="Tecnologias dos projetos"><span>Python</span><span>TypeScript</span><span>Next.js</span><span>Supabase</span><span>OpenAI Agents SDK</span></div></div></section>
-    <section class="contact" id="contato"><div><p class="eyebrow">Vamos conversar</p><h2>Aberto a novas<br>oportunidades.</h2></div><div class="social"><a href="https://www.linkedin.com/in/jhonathang/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Jhowtelli" target="_blank" rel="noreferrer">GitHub ↗</a></div></section>
+
+    <section class="section shell" id="agendlypro" aria-labelledby="agendly-title">
+      <div class="section-head">
+        <p class="section-kicker">01 · Projeto principal</p>
+        <h2>Uma agenda pública.<br>Menos trabalho manual.</h2>
+        <p class="section-intro">Estudo de caso do AgendlyPro, produto SaaS de agendamento para barbearias, salões e profissionais de beleza.</p>
+      </div>
+
+      <article class="flagship">
+        <div class="flagship-top"><span>Produto web · Agendamento online</span><span class="featured">Projeto em destaque</span></div>
+        <div class="flagship-grid">
+          <div class="flagship-copy">
+            <h3 id="agendly-title">AgendlyPro</h3>
+            <p class="flagship-summary">O produto conecta um link público de agendamento à rotina de quem atende com hora marcada. O profissional cadastra serviços e horários; clientes escolhem quando marcar; o negócio acompanha os atendimentos em uma agenda online.</p>
+            <ul class="feature-list" aria-label="Recursos apresentados no produto">
+              <li><span class="check" aria-hidden="true">✓</span>Link público para compartilhar</li>
+              <li><span class="check" aria-hidden="true">✓</span>Serviços, durações e horários</li>
+              <li><span class="check" aria-hidden="true">✓</span>Agenda no navegador do celular</li>
+              <li><span class="check" aria-hidden="true">✓</span>Lembretes automáticos</li>
+            </ul>
+            <div class="stack-row" aria-label="Tecnologias do projeto"><span class="stack-tag">Next.js</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Supabase</span><span class="stack-tag">Stripe</span></div>
+            <div class="flagship-actions"><a class="button button-dark" href="https://agendlypro.vercel.app" target="_blank" rel="noreferrer">Explorar AgendlyPro <span aria-hidden="true">↗</span></a><a class="inline-link" href="https://github.com/Jhowtelli" target="_blank" rel="noreferrer">Outros projetos no GitHub ↗</a></div>
+          </div>
+
+          <div>
+            <div class="booking-visual" aria-label="Fluxo ilustrado de agendamento do AgendlyPro">
+              <div class="booking-flow">
+                <div class="booking-step"><span class="step-no">01</span><strong>Configurar</strong><p>Estabelecimento, equipe, serviços, preço e duração.</p></div>
+                <div class="booking-step"><span class="step-no">02</span><strong>Compartilhar</strong><p>O negócio divulga seu link pela bio, WhatsApp ou Google.</p></div>
+                <div class="booking-step"><span class="step-no">03</span><strong>Receber reservas</strong><p>O cliente escolhe um serviço e um horário disponível.</p></div>
+              </div>
+              <div class="booking-bottom"><span><strong>Resultado esperado:</strong> agenda acessível para profissional e cliente</span><span>WEB · MOBILE</span></div>
+            </div>
+            <div class="case-context">
+              <div class="context-card"><small>Problema de produto</small><p>Horários e conversas espalhados dificultam acompanhar a agenda.</p></div>
+              <div class="context-card"><small>Experiência</small><p>Cliente marca pelo link; o profissional consulta a agenda online.</p></div>
+              <div class="context-card"><small>Modelo</small><p>Planos SaaS recorrentes para negócios de serviços.</p></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section agent-section" id="projetos" aria-labelledby="agents-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-kicker">02 · Sistemas multiagente</p>
+          <h2 id="agents-title">Agentes com papéis,<br>ferramentas e limites.</h2>
+          <p class="section-intro">Cada protótipo combina um coordenador, especialistas e ferramentas focadas em uma tarefa. As demonstrações públicas usam dados sintéticos.</p>
+        </div>
+
+        <div class="agent-grid">
+          <article class="agent-case" aria-labelledby="logimind-title">
+            <div class="agent-visual visual-logimind">
+              <div class="mini-dashboard" aria-label="Visão ilustrativa dos indicadores sintéticos do LogiMind Ops">
+                <div class="mini-top"><span>LogiMind Ops · fluxo operacional</span><span class="synthetic-pill">DADOS SINTÉTICOS</span></div>
+                <div class="mini-metrics">
+                  <div class="mini-metric"><small>PROCESSADOS</small><strong>1.840</strong><em> / 30 min</em></div>
+                  <div class="mini-metric"><small>FILA EM ABERTO</small><strong>216</strong><em> itens</em></div>
+                  <div class="mini-metric"><small>PACKING</small><strong>420</strong><em> / h</em></div>
+                  <div class="mini-metric"><small>META SLA</small><strong>92%</strong><em> referência</em></div>
+                </div>
+                <div class="mini-bars" aria-label="Gráfico ilustrativo do fluxo por hora"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="agent-content">
+              <div class="case-meta"><span class="case-no">02A</span><span>IA para operações</span><span>Python · FastAPI</span></div>
+              <h3 id="logimind-title">LogiMind Ops</h3>
+              <p class="agent-lead">Um painel para investigar eventos operacionais, entender onde uma fila pode estar crescendo e comparar cenários simples de capacidade.</p>
+              <div class="case-facts">
+                <div class="case-fact"><small>Pergunta central</small><p>Quais eventos explicam a fila e quais dados sustentam a hipótese?</p></div>
+                <div class="case-fact"><small>Especialistas</small><p>Analista de fluxo e planejador de capacidade.</p></div>
+                <div class="case-fact"><small>Ferramenta</small><p>Consulta local de eventos e cálculo determinístico de cenário.</p></div>
+                <div class="case-fact"><small>Limite</small><p>Não conecta a WMS, equipamentos nem operações reais.</p></div>
+              </div>
+              <div class="agent-flow"><p class="flow-label">Orquestração</p><div class="flow-line"><span class="flow-node">Pergunta</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Coordenador</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Fluxo / capacidade</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Cenário local</span></div></div>
+              <div class="agent-links"><a class="inline-link" href="https://jhowtelli.github.io/logimind-ops/" target="_blank" rel="noreferrer">Abrir demonstração ↗</a><a class="inline-link" href="https://github.com/Jhowtelli/logimind-ops" target="_blank" rel="noreferrer">Ver arquitetura e código ↗</a></div>
+            </div>
+          </article>
+
+          <article class="agent-case" aria-labelledby="agendaiq-title">
+            <div class="agent-visual visual-agendaiq">
+              <div class="agenda-preview" aria-label="Ilustração dos indicadores de dados sintéticos do AgendaIQ">
+                <div class="mini-top"><span>AgendaIQ · amostra de horários</span><span class="synthetic-pill">24 REGISTROS FICTÍCIOS</span></div>
+                <div class="agenda-big"><strong>18</strong><span>horários concluídos</span></div>
+                <div class="agenda-progress" aria-label="18 de 24 registros concluídos"><span></span></div>
+                <div class="agenda-services"><div class="agenda-service"><span>Concluídos</span><strong>18</strong></div><div class="agenda-service"><span>Faltas</span><strong>4</strong></div><div class="agenda-service"><span>Cancelamentos</span><strong>2</strong></div></div>
+              </div>
+            </div>
+            <div class="agent-content">
+              <div class="case-meta"><span class="case-no">02B</span><span>IA para pequenos serviços</span><span>Python · FastAPI</span></div>
+              <h3 id="agendaiq-title">AgendaIQ</h3>
+              <p class="agent-lead">Especialistas analisam procura por serviço, ocupação da agenda e padrões que podem merecer investigação, com comparação de capacidade baseada nos registros locais.</p>
+              <div class="case-facts">
+                <div class="case-fact"><small>Base da demo</small><p>24 registros sintéticos em CSV; sem dados de clientes reais.</p></div>
+                <div class="case-fact"><small>Especialistas</small><p>Procura, capacidade e retenção, acionados pelo coordenador.</p></div>
+                <div class="case-fact"><small>Ferramenta</small><p>Agregações do CSV e cálculos transparentes de cenários.</p></div>
+                <div class="case-fact"><small>Limite</small><p>A amostra não permite previsões estatísticas confiáveis.</p></div>
+              </div>
+              <div class="agent-flow"><p class="flow-label">Orquestração</p><div class="flow-line"><span class="flow-node">Pergunta</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Coordenador</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Procura / capacidade / retenção</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">CSV local</span></div></div>
+              <div class="agent-links"><a class="inline-link" href="https://jhowtelli.github.io/agendaiq/" target="_blank" rel="noreferrer">Abrir demonstração ↗</a><a class="inline-link" href="https://github.com/Jhowtelli/agendaiq" target="_blank" rel="noreferrer">Ver arquitetura e código ↗</a></div>
+            </div>
+          </article>
+
+          <article class="agent-case" aria-labelledby="careerlab-title">
+            <div class="agent-visual visual-careerlab">
+              <div class="evidence-board" aria-label="Ilustração do mapa de evidências do CareerLab AI">
+                <div class="evidence-top"><span>CareerLab AI · mapa de evidências</span><span>DEMO LOCAL</span></div>
+                <div class="evidence-row"><span><strong>Requisito identificado</strong><small>Busca por trecho relacionado no currículo</small></span><span class="evidence-status">COM EVIDÊNCIA</span></div>
+                <div class="evidence-row"><span><strong>Trecho para revisão</strong><small>A pessoa confirma se o contexto representa sua experiência</small></span><span class="evidence-status">REVISAR</span></div>
+                <div class="evidence-row"><span><strong>Termo não localizado</strong><small>Ausência do termo não prova ausência da habilidade</small></span><span class="evidence-status pending">SEM MATCH</span></div>
+              </div>
+            </div>
+            <div class="agent-content">
+              <div class="case-meta"><span class="case-no">02C</span><span>IA para preparação profissional</span><span>Python · Agents SDK</span></div>
+              <h3 id="careerlab-title">CareerLab AI</h3>
+              <p class="agent-lead">Um fluxo ajuda a relacionar requisitos de vaga com evidências textuais, transforma lacunas confirmadas em um plano de estudos e sugere perguntas para praticar entrevistas.</p>
+              <div class="case-facts">
+                <div class="case-fact"><small>Especialistas</small><p>Analista de evidências, planejador de estudos e entrevistador.</p></div>
+                <div class="case-fact"><small>Ferramentas</small><p>Correspondência local de termos e cálculo de horas de estudo.</p></div>
+                <div class="case-fact"><small>Revisão</small><p>Trechos e sugestões ficam para avaliação da própria pessoa.</p></div>
+                <div class="case-fact"><small>Limite</small><p>Não classifica candidatos nem decide sobre contratação.</p></div>
+              </div>
+              <div class="agent-flow"><p class="flow-label">Orquestração</p><div class="flow-line"><span class="flow-node">Vaga e objetivo</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Coordenador</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Evidência / estudo / entrevista</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-node">Revisão humana</span></div></div>
+              <div class="agent-links"><a class="inline-link" href="https://jhowtelli.github.io/careerlab-ai/" target="_blank" rel="noreferrer">Abrir demonstração ↗</a><a class="inline-link" href="https://github.com/Jhowtelli/careerlab-ai" target="_blank" rel="noreferrer">Ver arquitetura e código ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method-section" aria-labelledby="method-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-kicker">Como desenho os fluxos</p>
+          <h2 id="method-title">Cada agente tem<br>um trabalho definido.</h2>
+          <p class="section-intro">Os projetos separam interpretação do modelo de cálculos e consultas que podem ser verificados.</p>
+        </div>
+        <div class="method-board" role="list" aria-label="Etapas de um fluxo multiagente">
+          <div class="method-step" role="listitem"><span class="method-step-no">01 / CONTEXTO</span><h3>Receber a tarefa</h3><p>O sistema define a pergunta e os dados necessários antes de encaminhar o pedido.</p></div>
+          <div class="method-step" role="listitem"><span class="method-step-no">02 / ROTEAMENTO</span><h3>Escolher o especialista</h3><p>O coordenador direciona a tarefa ao agente que tem o papel adequado.</p></div>
+          <div class="method-step" role="listitem"><span class="method-step-no">03 / FERRAMENTAS</span><h3>Consultar e calcular</h3><p>Funções locais retornam registros, agregações ou cenários determinísticos.</p></div>
+          <div class="method-step" role="listitem"><span class="method-step-no">04 / RESPOSTA</span><h3>Explicar com limites</h3><p>A resposta mostra o que foi encontrado e deixa a decisão com a pessoa.</p></div>
+        </div>
+        <p class="method-note">Os três projetos de IA são protótipos de portfólio. As demonstrações estáticas não chamam um modelo; os backends podem ser executados localmente com uma chave de API própria. Nenhuma chave está nos repositórios.</p>
+      </div>
+    </section>
+
+    <section class="section profile-section" id="sobre" aria-labelledby="about-title">
+      <div class="profile-grid shell">
+        <div class="profile-title"><p class="section-kicker">Sobre minha trajetória</p><h2 id="about-title">Experiência prática.<br>Novos caminhos.</h2></div>
+        <div class="profile-copy">
+          <p>Sou estudante de Sistemas de Informação e venho de ambientes onde rede, equipamento e disponibilidade afetam a operação. Estou ampliando essa base com desenvolvimento web e IA aplicada, construindo protótipos que podem ser examinados por interface, documentação e código.</p>
+          <div class="timeline" aria-label="Trajetória e foco">
+            <div class="timeline-row"><strong>Operações e infraestrutura</strong><span>Redes, Active Directory, coletores e scanners em ambientes logísticos.</span></div>
+            <div class="timeline-row"><strong>Sistemas de Informação</strong><span>Estudos em andamento e prática com projetos próprios.</span></div>
+            <div class="timeline-row"><strong>Foco atual</strong><span>Produtos web, Python, automação e orquestração de agentes de IA.</span></div>
+          </div>
+          <div class="skills">
+            <div class="skill-card"><h3>Produtos web</h3><p>Next.js, TypeScript, Supabase e Stripe nos projetos de produto.</p></div>
+            <div class="skill-card"><h3>Agentes e APIs</h3><p>Python, FastAPI, OpenAI Agents SDK, handoffs e ferramentas locais.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact-inner shell">
+        <div><p class="section-kicker">Vamos conversar</p><h2 id="contact-title">Aberto a oportunidades em tecnologia e IA aplicada.</h2><p class="contact-copy">Se algum projeto chamou sua atenção, veja a demonstração ou fale comigo pelo LinkedIn.</p></div>
+        <div class="contact-links"><a href="https://www.linkedin.com/in/jhonathang/" target="_blank" rel="noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span></a><a href="https://github.com/Jhowtelli" target="_blank" rel="noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
   </main>
-  <footer class="footer wrap"><span>Jhonathan Da Silva Gomes</span><span>Portfólio pessoal · 2026</span></footer>
+
+  <footer class="footer"><div class="footer-inner shell"><span>Jhonathan Da Silva Gomes · Cajamar, SP · Inglês intermediário</span><span>Portfólio e projetos <a href="https://github.com/Jhowtelli" target="_blank" rel="noreferrer">no GitHub ↗</a></span></div></footer>
 </body>
 </html>
