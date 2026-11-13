@@ -6,7 +6,7 @@ Profissional de tecnologia e estudante de Sistemas de Informação. Estou constr
 
 - [AgendlyPro](https://agendlypro.vercel.app) — SaaS de agendamento online para pequenos negócios.
 - [Agentes de IA para carreira](https://github.com/Jhowtelli/agentes-ia-carreira) — análise de vagas e planejamento de estudos com agentes especialistas.
-- [Portfólio](https://jhowtelli.github.io) — projetos, trajetória e contato.
+- [Portfólio](https://jhowtelli.github.io/Jhowtelli/) — projetos, trajetória e contato.
 
 ## Tecnologias nos projetos
 
